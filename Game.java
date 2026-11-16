@@ -147,8 +147,8 @@ public class Game extends JPanel {
             over = true;
             points += hp;            //Bonus points for the HP left over
             msg1 = "The " + beaten + " falls! The crowd roars: " + name + " is FREE!";
-            if (hp >= 30) msg2 = "Final score: " + points + "  Rank: LEGEND OF THE ARENA";    //Rank depends on how much HP is left
-            else msg2 = "Final score: " + points + "  Rank: Battered Survivor";
+            if (hp >= 30) msg2 = "Final score: " + points + "  Rank: LEGENDARY WINNER";    //Rank depends on how much HP is left
+            else msg2 = "Final score: " + points + "  Rank: Barely survived";
         } else {
             monsterHp = 30 + round * 15;  //Each new monster has more HP
             hp = Math.min(60, hp + 10);   //Player heals a little between fights
