@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Monster Battle Arena</title>
+  <script src="https://cjrtnc.leaningtech.com/5.0/loader.js"></script>
+</head>
+<body style="background:#000; color:#fff; font-family:sans-serif;">
+  <h2>Monster Battle Arena</h2>
+  <p id="status">Loading... the game window will appear below (can take 10-20 seconds).</p>
+  <script type="module">
+    const status = document.getElementById("status");
+    try {
+      // Finds the folder this page is in, so it works locally and on GitHub Pages
+      const folder = location.pathname.replace(/\/[^\/]*$/, "");
+      await cheerpjInit();
+      cheerpjCreateDisplay(800, 600);
+      status.textContent = "Starting game...";
+      await cheerpjRunJar("/app" + folder + "/game.jar");
+    } catch (err) {
+      status.style.color = "red";
+      status.textContent = "ERROR: " + err;
+    }
+  </script>
+</body>
+</html>
