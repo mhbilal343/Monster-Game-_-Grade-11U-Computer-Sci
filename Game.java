@@ -114,7 +114,7 @@ public class Game extends JPanel {
 
         
         } else {
-            hp = Math.min(60, hp + 15);     //Math.min stops the HP from going over 60
+            hp = Math.min(60, hp + 15);     //Stops the HP from going over 60
             msg1 = "You drink a potion and heal 15 HP.";
         }
 
